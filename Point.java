@@ -24,4 +24,10 @@ public class Point {
     double b = other.getY();
     return Math.sqrt((x - a) * (x - a) + (y - b) * (y - b));
   }
+
+  public boolean equals (Point other) {
+    double a = other.getX();
+    double b = other.getY();
+    return ((a == x) && (b == y));
+  }
 }
