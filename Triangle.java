@@ -8,9 +8,15 @@ public class Triangle {
   }
 
   public Triangle (double x1, double y1, double x2, double y2, double x3, double y3) {
-    Point a = new Point (x1, y1);
-    Point b = new Point (x2, y2);
-    Point c = new Point (x3, y3);
-    Triangle (a, b, c);
+    v1 = new Point (x1, y1);
+    v2 = new Point (x2, y2);
+    v3 = new Point (x3, y3);
+  }
+
+  public double getPerimeter () {
+    double d1 = v1.distanceTo(v2);
+    double d2 = v1.distanceTo(v3);
+    double d3 = v2.distanceTo(v3);
+    return d1 + d2 + d3;
   }
 }
